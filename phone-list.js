@@ -5,5 +5,6 @@
 'use strict';
 
 import './src/app/phone-list/phone-list.module';
+import './src/app/phone-list/phone-list.service';
 import './src/app/phone-list/phone-list.component';
 import './src/app/phone-list/phone-list.component.html';

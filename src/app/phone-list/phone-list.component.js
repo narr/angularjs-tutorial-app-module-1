@@ -5,7 +5,9 @@ import angular from 'angular';
 angular.module('phonecatApp.phoneList')
   .component('phoneList', {
     bindings: {
-      // test: '<', // one-way binding
+      phoneListUrl: '@',
+      phoneListFilterQuery: '<',
+      phoneListOrderBy: '<',
     },
     controller: PhoneListController,
     controllerAs: 'phoneListVm',
@@ -15,29 +17,20 @@ angular.module('phonecatApp.phoneList')
 
 PhoneListController.$inject = [
   '$element',
+  'phoneListService',
 ];
 
-function PhoneListController($element) {
+function PhoneListController($element, phoneListService) {
 
   const vm = this;
 
-  init();
+  vm.$onInit = init;
+  vm.$postLink = postLink;
 
   function init() {
-    vm.$postLink = postLink;
-
-    vm.phones = [
-      {
-        name: 'Nexus S',
-        snippet: 'Fast just got faster with Nexus S.',
-      }, {
-        name: 'Motorola XOOM™ with Wi-Fi',
-        snippet: 'The Next, Next Generation tablet.',
-      }, {
-        name: 'MOTOROLA XOOM™',
-        snippet: 'The Next, Next Generation tablet.',
-      },
-    ];
+    phoneListService.getPhoneList(vm.phoneListUrl).then(function (res) {
+      vm.phones = res.data;
+    });
   }
 
   function postLink() { }
