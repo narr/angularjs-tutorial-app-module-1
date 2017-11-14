@@ -2,6 +2,13 @@
   "name": "angularjs-tutorial-app-module-1",
   "version": "0.0.0",
   "devDependencies": {
-    "eslint": "^4.11.0"
-  }
+    "eslint": "^4.11.0",
+    "htmlhint": "^0.9.13",
+    "stylelint": "^8.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/narr/angularjs-tutorial-app-module-1.git"
+  },
+  "private": true
 }
