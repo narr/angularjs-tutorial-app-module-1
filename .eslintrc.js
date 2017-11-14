@@ -18,6 +18,10 @@ module.exports = {
       {
         "args": "none"
       }
+    ],
+    "quotes": [
+      "error",
+      "single"
     ]
   }
 };
