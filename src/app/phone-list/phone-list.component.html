@@ -1,7 +1,7 @@
 <ul class="phones">
   <li ng-repeat="phone in phoneListVm.phones |
       filter:phoneListVm.phoneListFilterQuery |
-      orderBy:phoneListVm.phoneListOrderBy" class="thumbnail">
+      orderBy:phoneListVm.phoneListOrderBy" class="thumbnail phone-list-item">
     <a href="javascript:;" class="thumb"
       ng-click="phoneListVm.imgClickHandler(phone.id)">
       <img ng-src="{{phone.imageUrl}}" alt="{{phone.name}}">
