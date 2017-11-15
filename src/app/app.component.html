@@ -16,7 +16,9 @@
     <div class="col-md-10">
       <phone-list phone-list-url="/json/phones.json"
         phone-list-filter-query="phoneListAppVm.phoneListFilterQuery"
-        phone-list-order-by="phoneListAppVm.phoneListOrderBy">
+        phone-list-order-by="phoneListAppVm.phoneListOrderBy"
+        on-img-click="phoneListAppVm.onPhoneListImgClick(id)"
+        on-name-click="phoneListAppVm.onPhoneListNameClick(id)">
       </phone-list>
     </div>
   </div>

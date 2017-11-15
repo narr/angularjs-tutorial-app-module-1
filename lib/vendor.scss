@@ -1,0 +1,7 @@
+$bootstrap-sass-asset-helper: true;
+
+@import '~bootstrap-sass/assets/stylesheets/_bootstrap'; /* stylelint-disable-line scss/at-import-no-partial-leading-underscore */
+
+body {
+  display: block; // to show body after Bootstrap is loaded
+}

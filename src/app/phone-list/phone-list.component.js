@@ -8,6 +8,8 @@ angular.module('phonecatApp.phoneList')
       phoneListUrl: '@',
       phoneListFilterQuery: '<',
       phoneListOrderBy: '<',
+      onImgClick: '&',
+      onNameClick: '&',
     },
     controller: PhoneListController,
     controllerAs: 'phoneListVm',
@@ -28,11 +30,26 @@ function PhoneListController($element, phoneListService) {
   vm.$postLink = postLink;
 
   function init() {
+    vm.imgClickHandler = imgClickHandler;
+    vm.nameClickHandler = nameClickHandler;
+
     phoneListService.getPhoneList(vm.phoneListUrl).then(function (res) {
       vm.phones = res.data;
     });
   }
 
-  function postLink() { }
+  function postLink() {}
+
+  function imgClickHandler(id) {
+    vm.onImgClick({
+      id: id,
+    });
+  }
+
+  function nameClickHandler(id) {
+    vm.onNameClick({
+      id: id,
+    });
+  }
 
 }
