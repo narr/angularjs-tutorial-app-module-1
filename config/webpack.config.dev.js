@@ -13,7 +13,7 @@ function webpackConfig() {
       vendor: './lib/vendor.js',
       main: [
         './src/main.js', // bootstrap files
-        './index.js', // main module, phont-list
+        './index.js', // main module, phone-list
       ],
       app: [
         './src/app/app.module.js',
