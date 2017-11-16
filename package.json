@@ -2,11 +2,11 @@
   "name": "angularjs-tutorial-app-module-1",
   "version": "0.0.0",
   "dependencies": {
-    "angular": "^1.6.6"
+    "angular": "^1.6.6",
+    "angular-animate": "^1.6.6",
+    "bootstrap-sass": "^3.3.7"
   },
   "devDependencies": {
-    "angular-animate": "^1.6.6",
-    "bootstrap-sass": "^3.3.7",
     "css-loader": "^0.28.7",
     "eslint": "^4.11.0",
     "file-loader": "^1.1.5",
